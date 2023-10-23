@@ -13,11 +13,10 @@ function calculatePayments() {
     const interestRate = Number(document.getElementById("interestRateText").value) / 100; //converts it into a decimal rate
     const loanLengthYears = Number(document.getElementById("loanLengthText").value);
 
-    var monthlyPayment = (principal * (interestRate/12) * (Math.pow((1 + (interestRate/12)), (loanLengthYears * 12)) / 
-    ((Math.pow((1 + (interestRate/12)), (loanLengthYears * 12)) - 1))));
-    const totalInterest = (Math.round(((monthlyPayment * (loanLengthYears * 12)) - principal)*100)/100).toFixed(2);
+    let monthlyPayment = (principal * (interestRate/12) * (Math.pow((1 + (interestRate/12)), (loanLengthYears * 12)) / 
+    ((Math.pow((1 + (interestRate/12)), (loanLengthYears * 12)) - 1)))).toFixed(2);
+    const totalInterest = ((monthlyPayment * (loanLengthYears * 12)) - principal).toFixed(2);
 
-    monthlyPayment = (Math.round(monthlyPayment * 100)/100);
 
     const answer = "Your monthly payments will be $" + monthlyPayment + " and your total interest paid will be $" + totalInterest + ".";
     document.getElementById("monthlyPayAndTotalInterest").value = answer;

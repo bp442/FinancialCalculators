@@ -49,20 +49,22 @@
         </div>
         <div class="row">
             <div class="col">
-                <form class="form-floating">
-                    <input type="text" class="form-control" id="principalText" placeholder="Principal">
-                    <label for="principalText">Principal Payment</label>
-                </form>
-                <form class="form-floating">
-                    <input type="text" class="form-control" id="interestRateText" placeholder="Interest Rate in %">
-                    <label for="interestRateText">Interest Rate %</label>
-                </form>
-                <form class="form-floating">
-                    <input type="text" class="form-control" id="loanLengthText" placeholder="Loan Length in Years">
-                    <label for="loanLengthText">Loan Length (Years)</label>
-                </form>
+                <div class="row g-3 align-items-center">
+                    <form class="form-floating">
+                        <input type="text" class="form-control" id="principalText" placeholder="Principal">
+                        <label for="principalText">Principal Payment</label>
+                    </form>
+                    <form class="form-floating">
+                        <input type="text" class="form-control" id="interestRateText" placeholder="Interest Rate in %">
+                        <label for="interestRateText">Interest Rate %</label>
+                    </form>
+                    <form class="form-floating">
+                        <input type="text" class="form-control" id="loanLengthText" placeholder="Loan Length in Years">
+                        <label for="loanLengthText">Loan Length (Years)</label>
+                    </form>
 
-                <input type="button" id="calculateMortgageBtn" value="Calculate my Payments and Interest!">
+                    <input type="button" id="calculateMortgageBtn" value="Calculate my Payments and Interest!">
+                </div>
             </div>
         </div>
         <br>
@@ -87,9 +89,9 @@
 
         </footer>
     </main>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-            crossorigin="anonymous"></script>
-        <script src="scripts/mortgageCalculator.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="scripts/mortgageCalculator.js"></script>
 
 </body>

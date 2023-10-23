@@ -9,15 +9,15 @@ function init() {
 
 
 function calculateValue() {
-    const principal = Number(document.getElementById("principalText").value);
+    const deposit = Number(document.getElementById("depositText").value);
     const interestRate = Number(document.getElementById("interestRateText").value) / 100; //converts it into a decimal rate
-    const loanLengthYears = Number(document.getElementById("loanLengthText").value);
+    const durationLength = Number(document.getElementById("lengthText").value);
 
-    const monthlyPayment = (Math.round((principal * (interestRate/12) * (Math.pow((1 + (interestRate/12)), (loanLengthYears * 12)) / 
-    ((Math.pow((1 + (interestRate/12)), (loanLengthYears * 12)) - 1))))*100)/100).toFixed(2)
+    const totalValue = (deposit * ((Math.pow(1 + (interestRate/365), (durationLength * 365))))).toFixed(2);
+    const totalInterest = (totalValue - deposit).toFixed(2);
 
-    const totalInterest = (Math.round(((monthlyPayment * (loanLengthYears * 12)) - principal)*100)/100).toFixed(2);
+    const answer = "Your CD's value after " + durationLength + " years will be $" + totalValue + 
+    " and your total interest earned will be $" + totalInterest + ".";
 
-    const answer = "Your monthly payments will be $" + monthlyPayment + " and your total interest paid will be $" + totalInterest + ".";
-    document.getElementById("monthlyPayAndTotalInterest").value = answer;
+    document.getElementById("CDValue").value = answer;
 }
