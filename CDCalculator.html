@@ -49,7 +49,30 @@
         </div>
         <div class="row">
             <div class="col">
-                <p>Page Contents</p>
+                <form class="form-floating">
+                    <input type="text" class="form-control" id="depositText" placeholder="Deposit">
+                    <label for="depositText">Deposit</label>
+                </form>
+                <form class="form-floating">
+                    <input type="text" class="form-control" id="interestRateText" placeholder="Interest Rate in %">
+                    <label for="interestRateText">Interest Rate %</label>
+                </form>
+                <form class="form-floating">
+                    <input type="text" class="form-control" id="lengthText" placeholder="Length in Years">
+                    <label for="lengthText">Investment Duration (Years)</label>
+                </form>
+
+                <input type="button" id="calculateValueBtn" value="Calculate my CD's Value!">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <form class="form-floating">
+                    <input type="text" class="form-control" id="monthlyPayAndTotalInterest"
+                        placeholder="Your Monthly Payments and Total Interest Paid" readonly>
+                    <label for="monthlyPayAndTotalInterest">Monthly Payments and Total Interest</label>
+                </form>
             </div>
         </div>
 
